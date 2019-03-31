@@ -12,22 +12,23 @@ class UsersObject {
 
 
 const ObjectPeople= () => {
+    
 const newPeople=(Controller)
-.then(  (Controller)=>{Controller.map((Controller)=>{
-          
-    return (
-        <div>
-            <p>{Controller.gender}</p>
-            <p>{Controller.name}</p>
-            <p>{Controller.email}</p>
+.then(  
+    (Controller)=>{
+       
+    Controller.map((element, )=>{
+   
+  return(  <div>
+            <p>{element.gender}</p>
+            <p>{element.name}</p>
+            <p>{element.email}</p>
 
-        </div> 
-    )
-    })
-  
-  
-})
-return newPeople;
+   </div> )
+ 
+   })
+   return newPeople
+   })
 }
 
 export default ObjectPeople;
