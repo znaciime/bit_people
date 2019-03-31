@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import ObjectPeople from './entities/Users';
+import RenderedJsx from './components/ui/ui'
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
       <Header/>
-      <ObjectPeople/>
+      <RenderedJsx/>
       <Footer/>
 
       </div>

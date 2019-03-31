@@ -17,18 +17,14 @@ const newPeople=(Controller)
 .then(  
     (Controller)=>{
        
-    Controller.map((element, )=>{
+    Controller.map((element )=>{
    
-  return(  <div>
-            <p>{element.gender}</p>
-            <p>{element.name}</p>
-            <p>{element.email}</p>
-
-   </div> )
+return new UsersObject(element.gender, element.name, element.email)
  
    })
-   return newPeople
+   
    })
+   return newPeople
 }
 
 export default ObjectPeople;
