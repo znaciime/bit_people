@@ -1,18 +1,32 @@
 import React from 'react'
-import ObjectPeople from '../../entities/Users';
 
-const RenderedJsx=()=>{
-    const renderedarray=[]
-    ObjectPeople.map((element)=>{
-        return (
-            <div>
-                <p>{element.gender}</p>
-                <p>{element.name}</p>
-                <p>{element.email}</p>
-            </div>
-        ).push(renderedarray);
 
-    })
-return renderedarray;
+
+class PeopleList extends React.Component {
+
+
+
+    render() {
+        const cName = (this.props.selected) ? "row" : "col-4";
+        const renderedarray = this.props.people.map((element) => {
+            return (
+                <div className={cName}>
+                    <div className="col-2">
+                        <img src={element.picture}></img>
+                    </div>
+                    <div className="col-10 adress">
+
+                        <p>{element.name.first} {element.name.last}</p>
+                        <p><i className="fas fa-envelope"></i> {element.email}</p>
+
+                        <p><i className="fas fa-birthday-cake"></i>{element.bday}</p>
+                    </div>
+                </div>
+            );
+        })
+        return renderedarray;
+    }
 }
-export default RenderedJsx;
+
+
+export default PeopleList;

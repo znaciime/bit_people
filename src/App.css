@@ -31,3 +31,31 @@
     transform: rotate(360deg);
   }
 }
+img{
+  border-radius: 50%;
+}
+.top{background-color: darksalmon;
+
+}
+.bottom{
+  background-color: darksalmon;
+
+}
+.row{
+  border: 1px solid black;
+}
+.adress{
+  text-align: left;
+  
+}
+/* .row{
+  display: inline;
+  float:left;
+  
+  margin-left: 2%;
+} */
+.col-4{
+  float:left;
+  border: 1px solid black;
+  height: 280px;
+}
