@@ -17,6 +17,7 @@ const ObjectPeople = () => {
 
     const newPeople = Controller
         .then((peopleResults) => {
+            console.log(peopleResults);
             return peopleResults.map((element) => {
                 return new UsersObject(element.gender, element.name, element.email, element.picture.large, element.dob.date)
             })
