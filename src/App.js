@@ -10,6 +10,7 @@ import FailSearch from './components/ui/error';
 
 import About from './components/About/About';
 import { Switch, Route } from 'react-router-dom';
+import InputFields from './components/ui/inputfields'
 
 class App extends Component {
   constructor(props) {
@@ -109,17 +110,19 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header
-          handleChange={this.handleChange2}
-          onButtonClick={this.toggleLayout}
-          onButtonClick2={this.toggleRefresh} />
+        <Header />
+        <InputFields handleChange={this.handleChange2} onButtonClick2={this.toggleRefresh} onButtonClick={this.toggleLayout} />
 
         <Switch>
           <Route exact path='/about' component={About}></Route>
-          <Route exact path='/' component={() => <PeopleList selected={this.state.selected} people={this.state.people} />} />
-        </Switch>
+          <Route exact path='/' component={() => <PeopleList
+
+
+
+            selected={this.state.selected} people={this.state.people} />} />
+        </Switch >
         <Footer />
-      </div>
+      </div >
     );
 
   }
