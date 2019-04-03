@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       people: [],
       selected: true,
-      inputValue: "",
+
     }
   }
 
@@ -79,29 +79,31 @@ class App extends Component {
       })
 
   }
-  handleChange = (event) => {
-
-    this.setState({
-      inputValue: event.target.value
-    })
-
+  handleChange2 = (handleChange) => {
+    if (this.state.people.filter(this.props.inputValue)) {
+      return this.state.people;
+    }
   }
-  // componentWillUpdate() {
-  //   this.setState({
-  //     people: CubeLoading,
-  //   })
-  // }
 
   render() {
+
+    if (this.state.people.length === 0) {
+      return <CubeLoading />
+    }
+
+
+
+
     return (
       <div className="App">
-        <CubeLoading />
         <Header onButtonClick={this.toggleLayout} onButtonClick2={this.toggleRefresh} />
-        <PeopleList selected={this.state.selected} people={this.state.people} />
+        <PeopleList onChange={this.handleChange2} selected={this.state.selected} people={this.state.people} />
         <Footer />
       </div>
     );
+
   }
 }
+
 
 export default App;

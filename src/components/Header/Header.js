@@ -3,8 +3,21 @@ import React from 'react'
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: "" }
+        this.state = {
+            inputValue: ""
+        }
     }
+
+    handleChange = (event) => {
+
+        this.setState({
+            inputValue: event.target.value,
+
+        })
+        this.props.handleChange(event.target.value)
+        return this.state.inputValue
+    }
+
     render() {
         return (
             <>
@@ -18,9 +31,8 @@ class Header extends React.Component {
 
                 </div>
                 <div className="row">
-                    <div className="col-4"></div>
-                    <input type="text " className="col-4"
-                    ></input>
+                    <div className="col-4"><p>Search bit people =></p></div>
+                    <input type="text " className="col-4" value={this.state.inputValue} onChange={this.handleChange}></input>
                     <div className="col-4"></div>
                 </div>
             </>)
