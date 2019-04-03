@@ -22,7 +22,7 @@ class PeopleList extends React.Component {
                     </div>
                     <div className={isPink}>
 
-                        <p>{element.name.first} {element.name.last}</p>
+                        <p>{element.name} {element.lastname}</p>
                         <p><i className="fas fa-envelope"></i> {element.email}</p>
 
                         <p><i className="fas fa-birthday-cake"></i>{element.bday}</p>

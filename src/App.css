@@ -79,6 +79,19 @@ img{
 .refresh{
   float: right;
 }
+.errorpage{
+  text-align: center
+}
+.about{
+  float:left;
+}
+.top h1{
+  color: azure;
+}
+
+.about{
+  color: azure;
+}
 .sk-cube-grid {
   width: 200px;
   height: 200px;
