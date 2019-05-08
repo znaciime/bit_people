@@ -19,12 +19,12 @@ class InputFields extends React.Component {
     }
     render() {
         return (<div className="row aboutInputs">
-            <div className="col-3 searchIcon"><i class="fas fa-search"></i></div>
-            <div className="col-6 "><input className="inputfield" type="text " value={this.state.inputValue} onChange={this.handleChange} placeholder="Search people"></input></div>
-            <div className="col-3">
-                <Link to="/about" className="about"><b>About</b></Link>
-                <a onClick={this.props.onButtonClick} className="button " >Switch view<i className="fas fa-th-large"></i></a>
-                <a onClick={this.props.onButtonClick2} className="refresh" >Refresh People<i className="fas fa-redo-alt"></i></a>
+            <div className=" col-xs-12 col-sm-12 col-md-3  searchIcon"><i className="fas fa-search"></i></div>
+            <div className=" col-xs-12 col-sm-12 col-md-6 col-lg-6"><input className="inputfield" type="text " value={this.state.inputValue} onChange={this.handleChange} placeholder="Search people"></input></div>
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <Link to="/about" className="about"><button><b>About</b></button></Link>
+                <button onClick={this.props.onButtonClick} className="button " ><b>Switch view</b><i className="fas fa-th-large"></i></button>
+                <button onClick={this.props.onButtonClick2} className="refresh" ><b>Refresh People</b><i className="fas fa-redo-alt"></i></button>
             </div>
         </div>)
     }

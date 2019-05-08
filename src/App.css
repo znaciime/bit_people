@@ -34,12 +34,12 @@
 img{
   border-radius: 50%;
 }
-.top{background-color: darksalmon;
+.top{background-color:skyblue;
   color: azure;
 
 }
 .bottom{
-  background-color: darksalmon;
+  background-color: skyblue;
   clear: left;
   
   
@@ -75,41 +75,44 @@ img{
   float: right;
 }
 .inputfield{
-  width:500px;
+  width:100%;
 }
 .aboutInputs{
-  background-color: darksalmon;
+  background-color: skyblue;
   color:white;
 }
 .divovi2{
   border: 1px solid black;
   margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
 
 }
 .female{
   background-color: pink;
   width: 100%;
-  float: left;
+  
   text-align: left;
+  overflow: hidden;
+  
 }
-.col-10{
+.col-8{
   text-align: left;
 }
 .refresh{
-  float: right;
+  
 }
 .errorpage{
   text-align: center
 }
-.about{
-  float:left;
-}
+
 .top h1{
   color: azure;
 }
 
 .about{
   color: azure;
+ 
 }
 .sk-cube-grid {
   width: 200px;
